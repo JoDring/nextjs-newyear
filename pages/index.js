@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
+import Link from 'next/link'
 
 export async function getStaticProps() {
     const allPostsData = await fetch('https://proapi.azurewebsites.net/github/issues').then(res => res.json())
@@ -26,7 +27,7 @@ export default function Home({allPostsData}) {
                             <br/>
                             {id}
                             <br/>
-                            <div className="btn-blue">{created_at}</div>
+                            <Link href="/posts/first-post" className="btn-blue">{created_at}</Link>
                         </li>
                     ))}
                 </ul>
