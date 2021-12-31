@@ -27,7 +27,7 @@ export default function Home({allPostsData}) {
                             <br/>
                             {id}
                             <br/>
-                            <Link href="/posts/first-post" className="btn-blue">{created_at}</Link>
+                            <Link href="/posts/first-post"><span className="btn-blue">{created_at}</span></Link>
                         </li>
                     ))}
                 </ul>
