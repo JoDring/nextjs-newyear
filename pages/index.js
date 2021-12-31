@@ -26,7 +26,7 @@ export default function Home({allPostsData}) {
                             <br/>
                             {id}
                             <br/>
-                            {created_at}
+                            <div className="btn-blue">{created_at}</div>
                         </li>
                     ))}
                 </ul>
